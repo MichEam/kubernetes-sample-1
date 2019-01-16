@@ -15,6 +15,16 @@ Rules:
                                /        nginx-service:80 (<none>)                               
 ```
 
+また、振り分け時にコンテキストを削除している。
+
+```
+http://nginx.192.168.99.100.nip.io/echo/some/path
+
+↓↓↓↓↓↓↓
+
+http://echo-app:8080/some/path
+```
+
 ## 参考
 - [Minikube で快適に Ingress を利用する - Qiita](https://qiita.com/superbrothers/items/13d8ce012ef23e22cb74)
 - [Minikubeで快適にIngressを利用したいが、dnsmasqの設定は面倒なので省略したい - Qiita](https://qiita.com/nobusue/items/4817c19c0279f070c24b)
