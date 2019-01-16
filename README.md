@@ -1,6 +1,6 @@
 # kubernetes-sample-1
 
-Kubernetes Ingressをついかったデプロイメントのサンプル。
+Kubernetes Ingressをつかったデプロイメントのサンプル。
 
 nginx-ingress-controllerによって、
 URLパスごとに別のServiceへリクエストを振り分けている。
