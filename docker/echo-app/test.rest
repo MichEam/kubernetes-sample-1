@@ -1,0 +1,7 @@
+http://localhost:8080/
+
+--
+--
+GET /saaa/gggg?hoge=moge&a=b
+--
+GET /hello?

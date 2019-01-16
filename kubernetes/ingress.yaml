@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: test-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: nginx.192.168.99.100.nip.io
+      http:
+        paths:
+        - path: /echo
+          backend:
+            serviceName: echo-app-service
+            servicePort: 8080
+        - path: /hello
+          backend:
+            serviceName: hello-app-service
+            servicePort: 8080
+        - path: /
+          backend:
+            serviceName: nginx-service
+            servicePort: 80
