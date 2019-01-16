@@ -6,9 +6,13 @@ nginx-ingress-controllerによって、
 URLパスごとに別のServiceへリクエストを振り分けている。
 
 ```
-nginx.$(minikube ip).nip.io/echo/*  --> echo-app-service:8080
-nginx.$(minikube ip).nip.io/hello/* --> hello-app-service:8080
-nginx.$(minikube ip).nip.io/        --> nginx-service:80
+Rules:
+  Host                         Path  Backends
+  ----                         ----  --------
+  nginx.192.168.99.100.nip.io
+                               /echo    echo-app-service:8080 (<none>)
+                               /hello   hello-app-service:8080 (<none>)
+                               /        nginx-service:80 (<none>)                               
 ```
 
 ## 参考
